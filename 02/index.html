@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Context</title>
+</head>
+<body>
+	
+	<script>
+
+		// JavaScript objects in two ways
+		// 1. Object literals 
+		// 2. Constructor 
+
+
+		// var drink = 'Sprite';
+		// var foo = {
+		// 	drink: 'Cocacola',
+		// 	getDrink: function(){
+		// 		alert(this.drink);
+		// 	}
+		// }
+
+		// foo.getDrink();
+
+		var abc = {
+			a: 'A',
+			getabc: function(){
+				console.log('abc')
+			}
+		}
+
+		// var abc = {};
+		// abc.a = 'A';
+		// abc.getabc = function(){
+		// 	console.log('abc')
+		// }
+
+
+		var myObj = {
+			fname: 'Suman',
+			lname: 'Ali',
+			profession: 'Web Design',
+			getThis: function(){
+				console.log('This in object literals ');
+				console.log(this);
+			},
+			info: function(){
+				console.log('This in object literals');
+				console.log('Firstname: ' + this.fname + 'Lastname ' + this.lname);
+			},
+			submyObj: {
+				fname: 'Shoriful',
+				lname: 'Islam',
+				info: function(){
+					console.log('This in submyObj');
+					console.log('Firstname: ' + this.fname + ' Lastname ' + this.lname);
+				}
+			}
+		}
+
+		console.log(myObj.submyObj.info());
+
+		// normal function 
+		function myFunc(){
+			const name = "Suman Ali";
+			console.log('Global scope function: ');
+			console.log(this);
+		}
+
+		myFunc();
+
+		// Constructor 
+
+		function MyConstructor() {
+			this.fname = 'Suman';
+			this.lname = 'Ali';
+			this.profession = 'Web Design';
+			this.getThis = function(){
+				console.log('This in Constructor function ');
+				console.log(this);
+			},
+			this.info = function(){
+				console.log('This in Constructor function');
+				console.log('Firstname: ' + this.fname + ' Lastname ' + this.lname);
+			}
+		}
+
+		const person = new MyConstructor;
+		// console.log(person.fname);
+		// console.log(person.info());
+
+		var name = 'Meo';
+
+		var cat = {
+			   name: "Gus",
+			   color: "gray",
+			   age: 15,
+			   printInfo: function() {
+			      console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+
+			      function nestedFunc(){
+			      	console.log(this);
+			      	console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+			      }
+			      nestedFunc();
+			   }
+			}
+
+			cat.printInfo(); 
+
+	</script>
+</body>
+</html>

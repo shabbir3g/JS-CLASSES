@@ -1,0 +1,7 @@
+Part - 1 : JavaScript Variable, Scope, Hoisting 
+Part - 2 : JavaScript Context (this)
+Part - 3 : JavaScript Call, Apply, and Bind
+Part - 4 : JavaScript Primitive and Reference
+Part - 5 : JavaScript Boolean Data Type
+
+ // https://github.com/azizultex/JS-OOP/blob/master/scope_and_context.html

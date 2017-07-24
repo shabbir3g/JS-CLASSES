@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Boolean Data Type</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+		// true, false
+
+		// if(0){
+		// 	console.log('Yes! It\'s right');
+		// } else {
+		// 	console.log('No! It\'s incorrect');
+		// }
+
+
+		// Boolean as function 
+		var a = Boolean(true);
+		var b = Boolean(false);
+
+		// Boolean as object
+		var c = new Boolean(true);
+		var d = new Boolean(false);
+
+		// Boolean usage
+
+		// omitted, 0, -0, null, Nan, Undefined, empty string all return false
+		var e = Boolean();
+
+
+		var getPrimitive = Boolean(false);
+		var getObj = new Boolean(false);
+
+		const SPECIAL = Boolean(getObj);
+
+		if( getPrimitive ) {
+			console.log('Yes! The getPrimitive value is true')
+		}
+
+		if( getObj ) {
+			console.log('Yes! The getObj value is true')
+		}
+
+
+
+
+	</script>
+	
+</body>
+</html>

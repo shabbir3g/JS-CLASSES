@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Call, Apply and Bind</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+
+		// var name ="Limon";
+		// var age = 24;
+
+		const myObj = {
+			name: 'Shoriful',
+			age: 17,
+			getFullInfo: function(country1, country2, country3){
+				return 'The guy name is: ' + this.name + ' who is: ' + this.age + ' years old.' + ' He is from: ' + country1 + ', ' + country2 + ', ' + country3;
+			},
+			getContex: function(){
+				console.log(this);
+			}
+		}
+
+		// console.log(myObj.getFullInfo());
+
+		// const info = myObj.getFullInfo.bind(myObj, 'BD', 'US', 'AUS');
+		// console.log(info());
+		// console.log(myObj.getFullInfo.call(myObj, 'BD', 'US', 'AUS'));
+		// console.log(myObj.getFullInfo.apply(myObj, ['BD', 'US', 'AUS']));
+
+
+		// CALL, APPLY,
+		//  BIND
+
+		// call( This, arg1, arg2, arg3, arg4, ... )
+		// apply( This, [arg1, arg2, arg3, arg4, ... ])
+		// bind( This, arg1, arg2, arg3 ... )
+
+
+		const catinfo = {
+			catname: 'Meow',
+			food: 'Fish'
+		}
+
+		const catinfo2 = {
+			catname: 'Pew pew',
+			food: 'Milk'
+		}
+
+
+		function cat(){
+			console.log('The cat name is: ' + this.catname +  ' This eat ' + this.food);
+		}
+
+		cat.call(catinfo2);
+		cat.apply(catinfo);
+
+		const catcat = cat.bind(catinfo2);
+		catcat();
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Primitive and Reference </title>
+</head>
+<body>
+	
+
+
+
+	<script type="text/javascript">
+
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+		// DATA TYPES IN JAVASCRIPT
+		// 1. Primitives
+			// 	1. Boolean
+			// 	2. Null
+			// 	3. Undefined
+			// 	4. Number
+			// 	5. String
+			// 	6. Symbol (new in ECMAScript 6) ESMASCRIPT2015
+		// 2. Reference
+
+
+
+		// IN SHORT: Primitives doesn't have any properties or methods, but they have a wrapper object where they can access that object properties / methods. 
+
+
+		// console.log(typeof cat);
+		// console.log(cat.length);
+		// console.log(cat.includes('ow'));
+		// console.log(cat.includes('adfd'));
+
+		// [cat] [dog]
+
+		var cat = 'Meow';
+		var dog = cat;
+
+		console.log(cat);
+		console.log(dog);
+
+		var cat = 'Lalu';
+
+		console.log(cat);
+		console.log(dog);
+
+		// REFERENCE 
+
+		var petOne = {
+			type: 'Dog'
+		}
+
+		var petTwo = petOne;
+
+		console.log(petOne);
+		console.log(petTwo);
+
+		petTwo.type = 'Cat';
+
+		console.log(petOne);
+		console.log(petTwo);
+
+	</script>
+</body>
+</html>
